@@ -34,17 +34,19 @@ public class Formula {
 			if (h < b - a) {
 				if (h > 0) {
 					result = true;
-				} else
+					calcResult(result);
+				} else {
 					result = false;
-				System.out.println("Error: 'h' cannot be '0' or less than '0'");
-				System.exit(1);
+					System.out.println("Error: 'h' cannot be '0' or less than '0'");
+				}
+			} else {
+				result = false;
+				System.out.println("Error: 'h' should be less than 'b-a'");
 			}
+		} else {
 			result = false;
-			System.out.println("Error: 'h' should be less than 'b-a'");
-			System.exit(1);
+			System.out.println("Error: 'a' should be less than 'b'");
 		}
-		result = false;
-		System.out.println("Error: 'a' should be less than 'b'");
 		return result;
 	}
 

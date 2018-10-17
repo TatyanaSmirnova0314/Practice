@@ -13,7 +13,7 @@ public class SetOfTests {
 		boolean result;
 		boolean expectedResult=true;
 		
-		Formula formula = new Formula(2, 1, 10, 2);
+		Formula formula = new Formula(2, 1, 10, 1);
 		
 		result=formula.verifyParam(formula);
 		Assert.assertEquals(expectedResult, result);
